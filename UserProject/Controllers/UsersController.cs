@@ -46,8 +46,6 @@ namespace UserProject.Controllers
                 {
                     return BadRequest(new { error = "Email already exists" });
                 }
-
-                await _userService.AddNewUser(user);
                 return Ok();
             }
             catch (Exception ex)
